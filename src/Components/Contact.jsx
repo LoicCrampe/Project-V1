@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 function Contact() {
-    return <div>
+    return <div className="Contact col-2 offset-1">
         Contact
     </div>
 }

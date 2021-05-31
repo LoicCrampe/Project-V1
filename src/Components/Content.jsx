@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 function Content() {
-    return <div>
+    return <div className="Content col-6 offset-1">
         Content
     </div>
 }
