@@ -1,69 +1,62 @@
-import React from 'react'
-import Table from 'react-bootstrap/Table'
+import React, { Component } from 'react'
 
-function SideBar() {
-    return <div className="SideBar col-2 cursor-pointer">
-        <Table striped bordered hover size="sm">
-            <thead>
-                <tr>
-                    <th>Channels Favoris :</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Channel 1</td>
-                </tr>
-                <tr>
-                    <td>Channel 2</td>
-                </tr>
-                <tr>
-                    <td>Channel 3</td>
-                </tr>
-                <tr>
-                    <td>Channel 4</td>
-                </tr>
-                <tr>
-                    <td>Channel 5</td>
-                </tr>
-                <tr>
-                    <td>Channel 6</td>
-                </tr>
-                <tr>
-                    <td>Channel 7</td>
-                </tr>
-            </tbody>
-        </Table>
-        <Table striped bordered hover size="sm">
-            <thead>
-                <tr>
-                    <th>Channels :</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Channel 1</td>
-                </tr>
-                <tr>
-                    <td>Channel 2</td>
-                </tr>
-                <tr>
-                    <td>Channel 3</td>
-                </tr>
-                <tr>
-                    <td>Channel 4</td>
-                </tr>
-                <tr>
-                    <td>Channel 5</td>
-                </tr>
-                <tr>
-                    <td>Channel 6</td>
-                </tr>
-                <tr>
-                    <td>Channel 7</td>
-                </tr>
-            </tbody>
-        </Table>
-    </div>
+class SideBar extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            FarouriteChannel : [
+                {Name: "#Mila"},
+                {Name: "#BrunchStream"},
+                {Name: "#Mikasa"},
+                {Name: "#Eren"},
+                {Name: "#Naruto"},
+                {Name: "#SAO"},
+                {Name: "#DemonSouls"},
+                {Name: "#NierAutomata"},
+                {Name: "#SAO"},
+                {Name: "#DemonSouls"},
+                {Name: "#NierAutomata"},
+                {Name: "#SAO"},
+                {Name: "#DemonSouls"},
+                {Name: "#NierAutomata"},
+                {Name: "#KebabChef"}
+            ],
+            RecommendedChannel : [
+                {Name: "#Sung"},
+                {Name: "#Jin"},
+                {Name: "#Woo"},
+                {Name: "#Beru"},
+                {Name: "#Steel"},
+                {Name: "#Defense"},
+                {Name: "#Hunter"},
+                {Name: "#SAO"},
+                {Name: "#DemonSouls"},
+                {Name: "#NierAutomata"},
+                {Name: "#SAO"},
+                {Name: "#DemonSouls"},
+                {Name: "#NierAutomata"},
+                {Name: "#Monster"}
+            ]
+        }
+    }
+
+    render() {
+        return <div className="SideBar col-2">
+                    <p className="font-weight-bold">Channels Favoris :</p>
+                    <ul>
+                    {this.state.FarouriteChannel.map((channel, index) => (
+                        <li key={"td" + index}>{channel.Name}</li>
+                    ))}
+                    </ul>
+                    <p className="font-weight-bold">Channels recommandé:</p>
+                    <ul>
+                    {this.state.RecommendedChannel.map((channel, index) => (
+                        <li key={"td" + index}>{channel.Name}</li>
+                    ))}
+                    </ul>
+        </div>
+    }
 }
 
 export default SideBar;

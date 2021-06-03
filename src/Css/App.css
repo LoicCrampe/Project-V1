@@ -1,10 +1,26 @@
-html {
-  height: 1500px;
-}
-
 body {
   background-color: rgb(236, 236, 236)!important;
   height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 15px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);/*colorofthetrackingarea*/
+  border: 1px solid rgb(209, 209, 209);
+  border-radius:  20px;
+  -webkit-border-radius:  20px;
+  -moz-border-radius:  20px;
+  -ms-border-radius:  20px;
+  -o-border-radius:  20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(236, 236, 236); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid rgb(168, 168, 168); /* creates padding around scroll thumb */
 }
 
 .App {
@@ -17,6 +33,8 @@ body {
   :root {
     --header-top: 100px;
     --header-top-margin: 120px;
+    --chat-height: 40px;
+    --title-contact-height: 40px;
   }
 
   /* Start Header */
@@ -112,14 +130,49 @@ body {
 
   .SideBar {
     background-color: white;
+    width: 100%!important;
     border-top-right-radius: 5px;
     box-shadow: 0px 1px 3px 7px rgba(220, 220, 220, 0.5);
     padding-top: 10px;
-    height: 100%;
+    height: calc(100vh - var(--header-top-margin));
+    left: 0;
+    position: fixed!important;
+    overflow: auto;
+    z-index: 40;
   }
 
-  .SideBar Table td {
+  .SideBar ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .SideBar li {
+    list-style: none;
+  }
+
+  .SideBar li:hover{
     cursor: pointer;
+    color: blue;
+  }
+
+  .SideBar::-webkit-scrollbar {
+    width: 15px; /* width of the entire scrollbar */
+  }
+  
+  .SideBar::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);/*colorofthetrackingarea*/
+    border: 1px solid rgb(209, 209, 209);
+    border-radius:  20px;
+    -webkit-border-radius:  20px;
+    -moz-border-radius:  20px;
+    -ms-border-radius:  20px;
+    -o-border-radius:  20px;
+}
+  
+  .SideBar::-webkit-scrollbar-thumb {
+    background-color: rgb(236, 236, 236); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 1px solid rgb(168, 168, 168); /* creates padding around scroll thumb */
   }
   
   /* End SideBar */
@@ -143,8 +196,6 @@ body {
     background-color: white;
     border-top-left-radius: 5px;
     box-shadow: 0px 1px 3px 7px rgba(220, 220, 220, 0.5);
-    padding: 10px 0 0 0!important;
-    /* overflow: auto; */
     height: calc(100vh - var(--header-top-margin));
     right: 0;
     position: fixed!important;
@@ -152,20 +203,25 @@ body {
   }
 
   .TitleContact {
-    height: 0;
+    height: var(--title-contact-height);
+    margin: 0;
   }
 
   .ListOfContact {
     overflow: auto;
-    height: calc(100% - var(--header-top-margin));
+    height: calc(100% - var(--chat-height) - var(--title-contact-height));
+    margin: 0;
+    padding: 0;
   }
 
   .OneContact {
-    height: 0;
+    margin: 0px 0;
+    padding: 0;
+    height: 40px;
   }
 
   .OneContact p, .OneContact hr {
-    margin: 2px 0;
+    margin: 0px 0;
     padding: 0;
   }
 
@@ -174,6 +230,7 @@ body {
   .Chat {
     display: flex;
     box-shadow: 0px -2px 0px 0px rgba(220, 220, 220, 0.5);
+    height: var(--chat-height);
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -182,13 +239,33 @@ body {
   }
 
   .Chat p {
-    margin: 10px 5px;
+    margin: 0px 5px;
     padding: 0;
     align-items: center;
     justify-content: center;
   }
   
   /* End Chat */
+
+  .ListOfContact::-webkit-scrollbar {
+    width: 15px; /* width of the entire scrollbar */
+  }
+  
+  .ListOfContact::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);/*colorofthetrackingarea*/
+    border: 1px solid rgb(209, 209, 209);
+    border-radius:  20px;
+    -webkit-border-radius:  20px;
+    -moz-border-radius:  20px;
+    -ms-border-radius:  20px;
+    -o-border-radius:  20px;
+  }
+  
+  .ListOfContact::-webkit-scrollbar-thumb {
+    background-color: rgb(236, 236, 236); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 1px solid rgb(168, 168, 168); /* creates padding around scroll thumb */
+  }
 
   /* End Contact */
 
