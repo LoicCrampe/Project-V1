@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class SideBar extends Component {
+class LeftSidebar extends Component {
 
     constructor(props) {
         super(props)
@@ -42,7 +42,7 @@ class SideBar extends Component {
     }
 
     render() {
-        return <div className="SideBar col-2">
+        return <div className="LeftSidebar col-2">
                     <p className="font-weight-bold">Channels Favoris :</p>
                     <ul>
                     {this.state.FarouriteChannel.map((channel, index) => (
@@ -59,4 +59,4 @@ class SideBar extends Component {
     }
 }
 
-export default SideBar;
+export default LeftSidebar;

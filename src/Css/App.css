@@ -126,9 +126,9 @@ body::-webkit-scrollbar-thumb {
     height: 100%;
   }
 
-  /* Start SideBar */
+  /* Start LeftSidebar */
 
-  .SideBar {
+  .LeftSidebar {
     background-color: white;
     width: 100%!important;
     border-top-right-radius: 5px;
@@ -141,25 +141,25 @@ body::-webkit-scrollbar-thumb {
     z-index: 40;
   }
 
-  .SideBar ul {
+  .LeftSidebar ul {
     margin: 0;
     padding: 0;
   }
 
-  .SideBar li {
+  .LeftSidebar li {
     list-style: none;
   }
 
-  .SideBar li:hover{
+  .LeftSidebar li:hover{
     cursor: pointer;
     color: blue;
   }
 
-  .SideBar::-webkit-scrollbar {
+  .LeftSidebar::-webkit-scrollbar {
     width: 15px; /* width of the entire scrollbar */
   }
   
-  .SideBar::-webkit-scrollbar-track {
+  .LeftSidebar::-webkit-scrollbar-track {
     background: rgb(255, 255, 255);/*colorofthetrackingarea*/
     border: 1px solid rgb(209, 209, 209);
     border-radius:  20px;
@@ -169,17 +169,17 @@ body::-webkit-scrollbar-thumb {
     -o-border-radius:  20px;
 }
   
-  .SideBar::-webkit-scrollbar-thumb {
+  .LeftSidebar::-webkit-scrollbar-thumb {
     background-color: rgb(236, 236, 236); /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
     border: 1px solid rgb(168, 168, 168); /* creates padding around scroll thumb */
   }
   
-  /* End SideBar */
+  /* End LeftSidebar */
 
-  /* Start Content */
+  /* Start Center */
 
-  .Content {
+  .Center {
     background-color: white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -187,11 +187,11 @@ body::-webkit-scrollbar-thumb {
     padding-top: 10px;
   }
   
-  /* End Content */
+  /* End Center */
 
-  /* Start Contact */
+  /* Start RightSidebar */
 
-  .Contact {
+  .RightSidebar {
     display: flex;
     background-color: white;
     border-top-left-radius: 5px;
@@ -267,6 +267,6 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid rgb(168, 168, 168); /* creates padding around scroll thumb */
   }
 
-  /* End Contact */
+  /* End RightSidebar */
 
 }

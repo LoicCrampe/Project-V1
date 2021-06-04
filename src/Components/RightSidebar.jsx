@@ -2,7 +2,7 @@ import React, { Component }from 'react'
 import Chat from './Contacts/Chat'
 import Contact from './Contacts/Contact'
 
-class ListOfContacts extends Component {
+class RightSidebar extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -30,7 +30,7 @@ class ListOfContacts extends Component {
 
     render() {
         const list = this.state.listContact
-        return <div className="Contact col-2 offset-1 row">
+        return <div className="RightSidebar col-2 offset-1 row">
             <div className="TitleContact col-12">
                 <p className="font-weight-bold text-center">Contact :</p>
             </div>
@@ -46,4 +46,4 @@ class ListOfContacts extends Component {
     }
 }
 
-export default ListOfContacts;
+export default RightSidebar;
