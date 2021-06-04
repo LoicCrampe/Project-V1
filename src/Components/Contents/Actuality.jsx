@@ -6,7 +6,7 @@ import {faCommentAlt} from '@fortawesome/free-regular-svg-icons'
 
 function Actuality() {
     return (
-        <div className="col-12 text-center">
+        <div className="Center col-12 text-center">
             Actuality
         </div>
     )
