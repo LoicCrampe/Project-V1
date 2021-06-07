@@ -1,9 +1,5 @@
 import React from 'react'
 
-// Font Awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCommentAlt} from '@fortawesome/free-regular-svg-icons'
-
 function Post() {
     return (
         <div className="Center col-12 text-center">

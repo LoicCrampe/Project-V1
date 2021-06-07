@@ -187,10 +187,38 @@ body::-webkit-scrollbar-thumb {
     margin: 15px 0;
   }
 
+  .DivTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .IconFav {
+    align-self: center;
+    margin-left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .IconFav:hover {
+    align-self: center;
+    color: rgba(0, 0, 0, 0.5);;
+}
+  
   .PostInput {
     margin-top: 10px;
     margin-bottom: 20px;
   }
+
+  .PostImg {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .PostOption {
+    text-align: end;
+  }
+
   
   /* End Center */
 

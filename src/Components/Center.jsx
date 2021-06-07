@@ -5,9 +5,9 @@ import Actuality from './Contents/Actuality'
 
 function Center() {
     return <div className="col-6 offset-3">
-        <Title />
+        <Title Title={"#ExempleOfChannelName"} />
         <Post />
-        <Actuality />
+        <Actuality Like={true} numberLike={5500} numberComments={655} numberShare={450} />
     </div>
 }
 
